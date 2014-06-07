@@ -18,10 +18,10 @@ See the DEMO: [http://pf4jdemo-rmrodrigues.rhcloud.com/](http://pf4jdemo-rmrodri
 
 ##Project Structure
 * pf4j-web-demo/ (Maven Project)
-*   pf4j-web-demo-api -> This project contains all needed classes to develop a plugin.
-*   pf4j-web-demo-app -> This is the web application project.
-*   pf4j-web-demo-costum-plugin -> This plugin allows users to download person data in a costum format.
-*   pf4j-web-demo-csv-plugin    -> This plugin allows users to download person data in a CSV format. 
-*   pf4j-web-demo-json-plugin    -> This plugin allows users to download person data in a JSON format.
-*   pf4j-web-demo-xml-plugin    -> This plugin allows users to download person data in a XML format.
+  *   pf4j-web-demo-api -> This project contains all needed classes to develop a plugin.
+  *   pf4j-web-demo-app -> This is the web application project.
+  *   pf4j-web-demo-costum-plugin -> This plugin allows users to download person data in a costum format.
+  *   pf4j-web-demo-csv-plugin    -> This plugin allows users to download person data in a CSV format. 
+  *   pf4j-web-demo-json-plugin    -> This plugin allows users to download person data in a JSON format.
+  *   pf4j-web-demo-xml-plugin    -> This plugin allows users to download person data in a XML format.
 * Plugins/ (Contains the plugins)

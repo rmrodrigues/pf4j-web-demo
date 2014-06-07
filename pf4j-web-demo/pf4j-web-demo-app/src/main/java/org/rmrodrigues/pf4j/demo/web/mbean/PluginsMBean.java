@@ -22,40 +22,85 @@ import org.rmrodrigues.pf4j.demo.web.integration.PF4JWrapper;
 import ro.fortsoft.pf4j.PluginState;
 import ro.fortsoft.pf4j.PluginWrapper;
 
+/**
+ * The Class PluginsMBean.
+ * 
+ * @author rmrodrigues
+ */
 @ManagedBean(name = "pluginsMBean")
 @SessionScoped
 public class PluginsMBean implements Serializable {
 
-	/**
-	 * 
-	 */
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 7473027855852017369L;
 
+	/**
+	 * Gets the plugins.
+	 * 
+	 * @return the plugins
+	 */
 	public List<PluginWrapper> getPlugins() {
 		return PF4JWrapper.getInstance().getPlugins();
 	}
 
+	/**
+	 * Checks if is active.
+	 * 
+	 * @param pluginWrapper
+	 *            the plugin wrapper
+	 * @return true, if is active
+	 */
 	public boolean isActive(PluginWrapper pluginWrapper) {
 		return pluginWrapper.getPluginState().equals(PluginState.STARTED);
 
 	}
 
+	/**
+	 * Disable.
+	 * 
+	 * @param pluginWrapper
+	 *            the plugin wrapper
+	 * @return the string
+	 */
 	public String disable(PluginWrapper pluginWrapper) {
 		PF4JWrapper.getInstance().stopPlugin(pluginWrapper.getPluginId());
 		return "";
 	}
 
+	/**
+	 * Delete.
+	 * 
+	 * @param pluginWrapper
+	 *            the plugin wrapper
+	 * @return the string
+	 */
 	public String delete(PluginWrapper pluginWrapper) {
 		PF4JWrapper.getInstance().deletePlugin(pluginWrapper.getPluginId());
 		return "";
 	}
 
+	/**
+	 * Enable.
+	 * 
+	 * @param pluginWrapper
+	 *            the plugin wrapper
+	 * @return the string
+	 */
 	public String enable(PluginWrapper pluginWrapper) {
 		PF4JWrapper.getInstance().enablePlugin(pluginWrapper.getPluginId());
 		PF4JWrapper.getInstance().startPlugin(pluginWrapper.getPluginId());
 		return "";
 	}
 
+	/**
+	 * Download.
+	 * 
+	 * @param p
+	 *            the p
+	 * @param plugin
+	 *            the plugin
+	 * @return the string
+	 */
 	public String download(Person p, ExporterBase plugin) {
 
 		FacesContext fc = FacesContext.getCurrentInstance();
@@ -84,14 +129,19 @@ public class PluginsMBean implements Serializable {
 		return "";
 	}
 
+	/** The uploaded file. */
 	private UploadedFile uploadedFile;
 
+	/**
+	 * Submit.
+	 * 
+	 * @throws IOException
+	 *             Signals that an I/O exception has occurred.
+	 */
 	public void submit() throws IOException {
 		String fileName = FilenameUtils.getName(uploadedFile.getName());
 		String pluginsHome = System.getProperty("pf4j.pluginsDir", "plugins");
-		String contentType = uploadedFile.getContentType();
 		byte[] bytes = uploadedFile.getBytes();
-		System.out.println(pluginsHome + "/" + fileName);
 		FileOutputStream out = new FileOutputStream(pluginsHome + "/"
 				+ fileName);
 		out.write(bytes);
@@ -109,10 +159,21 @@ public class PluginsMBean implements Serializable {
 						"Plugin '%s'  successfully installed!", fileName)));
 	}
 
+	/**
+	 * Gets the uploaded file.
+	 * 
+	 * @return the uploaded file
+	 */
 	public UploadedFile getUploadedFile() {
 		return uploadedFile;
 	}
 
+	/**
+	 * Sets the uploaded file.
+	 * 
+	 * @param uploadedFile
+	 *            the new uploaded file
+	 */
 	public void setUploadedFile(UploadedFile uploadedFile) {
 		this.uploadedFile = uploadedFile;
 	}

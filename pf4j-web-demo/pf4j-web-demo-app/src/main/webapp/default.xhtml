@@ -38,11 +38,12 @@
 			<div class="starter-template">
 				<h1>Person Repo</h1>
 				<h:form>
-					<div class="btn-group" style="float:right;">
+					<div class="btn-group" style="float: right;">
 						<button type="button" class="btn btn-success dropdown-toggle"
 							data-toggle="dropdown">
 							Download All <span class="caret"></span>
-						</button><ul class="dropdown-menu" role="menu">
+						</button>
+						<ul class="dropdown-menu" role="menu">
 							<ui:repeat value="#{personMBean.plugins}" var="plugin">
 								<li><h:commandLink
 										action="#{personMBean.downloadAll(plugin)}">
@@ -93,9 +94,21 @@
 				</h:dataTable>
 			</div>
 
+			<div class="alert alert-info">
+				You can found plugins to install <a
+					href="https://github.com/rmrodrigues/pf4j-web-demo/plugins">here</a>.
+				Donwload and upload on plugin's page.
+			</div>
+
 		</div>
 		<!-- /.container -->
-
+		<div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="text-muted">
+					© <a href="https://github.com/rmrodrigues">RMRodrigues</a> 2014
+				</p>
+			</div>
+		</div>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet"
 			href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />

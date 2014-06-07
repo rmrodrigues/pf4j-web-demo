@@ -82,7 +82,8 @@
 					</h:column>
 
 				</h:dataTable>
-				<h:form role="form" StyleClass="form-inline" enctype="multipart/form-data">
+				<h:form role="form" StyleClass="form-inline"
+					enctype="multipart/form-data">
 					<div class="form-group">
 						<label for="pluginInputFile">File input</label>
 						<t:inputFileUpload id="pluginInputFile"
@@ -92,11 +93,23 @@
 						<h:messages />
 					</div>
 				</h:form>
+				<br/>
+				<br/>
+				<div class="alert alert-info">
+				You can found plugins to install <a
+					href="https://github.com/rmrodrigues/pf4j-web-demo/plugins">here</a>.
+			</div>
 			</div>
 
 		</div>
 		<!-- /.container -->
-
+		<div id="footer" class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="container">
+				<p class="text-muted">
+					© <a href="https://github.com/rmrodrigues">RMRodrigues</a> 2014
+				</p>
+			</div>
+		</div>
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet"
 			href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />

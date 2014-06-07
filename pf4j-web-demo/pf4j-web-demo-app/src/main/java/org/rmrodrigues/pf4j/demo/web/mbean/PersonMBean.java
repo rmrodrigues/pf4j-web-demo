@@ -16,16 +16,19 @@ import org.rmrodrigues.pf4j.demo.api.ExporterBase;
 import org.rmrodrigues.pf4j.demo.api.model.Person;
 import org.rmrodrigues.pf4j.demo.web.integration.PF4JWrapper;
 
+/**
+ * The Class PersonMBean.
+ * 
+ * @author rmrodrigues
+ */
 @ManagedBean(name = "personMBean")
 @SessionScoped
 public class PersonMBean implements Serializable {
 
-	/**
-	 * 
-	 */
+	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = -3314761395244493023L;
-	// private Person[] personList;
 
+	/** The Constant personList. */
 	private static final List<Person> personList = new ArrayList<Person>() {
 		{
 			add(new Person("Steve", "Jobs", 56, new Date(), "Palo Alto"));
@@ -38,10 +41,24 @@ public class PersonMBean implements Serializable {
 		}
 	};
 
+	/**
+	 * Gets the person list.
+	 * 
+	 * @return the person list
+	 */
 	public List<Person> getPersonList() {
 		return personList;
 	}
 
+	/**
+	 * Download.
+	 * 
+	 * @param p
+	 *            the p
+	 * @param plugin
+	 *            the plugin
+	 * @return the string
+	 */
 	public String download(Person p, ExporterBase plugin) {
 
 		FacesContext fc = FacesContext.getCurrentInstance();
@@ -70,6 +87,13 @@ public class PersonMBean implements Serializable {
 		return "";
 	}
 
+	/**
+	 * Download all.
+	 * 
+	 * @param plugin
+	 *            the plugin
+	 * @return the string
+	 */
 	public String downloadAll(ExporterBase plugin) {
 		FacesContext fc = FacesContext.getCurrentInstance();
 		HttpServletResponse response = (HttpServletResponse) fc
@@ -97,6 +121,11 @@ public class PersonMBean implements Serializable {
 		return "";
 	}
 
+	/**
+	 * Gets the plugins.
+	 * 
+	 * @return the plugins
+	 */
 	public List<ExporterBase> getPlugins() {
 		return PF4JWrapper.getInstance().getExtensions(ExporterBase.class);
 	}

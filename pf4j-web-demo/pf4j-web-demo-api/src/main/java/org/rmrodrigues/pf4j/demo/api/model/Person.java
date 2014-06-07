@@ -5,6 +5,7 @@ package org.rmrodrigues.pf4j.demo.api.model;
 
 import java.util.Date;
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class Person.
  * 

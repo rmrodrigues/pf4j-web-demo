@@ -52,7 +52,7 @@
 
 	<context-param>
 		<param-name>pf4j.pluginsDir</param-name>
-		<param-value>/Users/rmrodrigues/workspaces/pf4j/pf4j-web-demo/person-dist/plugins</param-value>
+		<param-value>/var/lib/openshift/538f9982e0b8cdc747000073/app-root/data</param-value>
 	</context-param>
 
 	<filter>

@@ -4,15 +4,14 @@ import java.util.Date;
 import org.jsefa.csv.annotation.CsvDataType;
 import org.jsefa.csv.annotation.CsvField;
 
-
-
-// TODO: Auto-generated Javadoc
 /**
  * The Class PersonCSV.
+ * 
+ * @author rmrodrigues
  */
 @CsvDataType()
 public class PersonCSV {
-	
+
 	/** The first name. */
 	@CsvField(pos = 1)
 	private String firstName;
@@ -30,17 +29,22 @@ public class PersonCSV {
 	private Date birthdate;
 
 	/** The address. */
-	@CsvField(pos = 5,format = "dd/MM/yyyy")
+	@CsvField(pos = 5, format = "dd/MM/yyyy")
 	private String address;
 
 	/**
 	 * Instantiates a new person csv.
-	 *
-	 * @param firstName the first name
-	 * @param lastName the last name
-	 * @param age the age
-	 * @param birthdate the birthdate
-	 * @param address the address
+	 * 
+	 * @param firstName
+	 *            the first name
+	 * @param lastName
+	 *            the last name
+	 * @param age
+	 *            the age
+	 * @param birthdate
+	 *            the birthdate
+	 * @param address
+	 *            the address
 	 */
 	public PersonCSV(String firstName, String lastName, int age,
 			Date birthdate, String address) {
@@ -51,8 +55,6 @@ public class PersonCSV {
 		this.birthdate = birthdate;
 		this.address = address;
 	}
-	
-	
 
 	/**
 	 * Instantiates a new person csv.
@@ -61,11 +63,9 @@ public class PersonCSV {
 		super();
 	}
 
-
-
 	/**
 	 * Gets the first name.
-	 *
+	 * 
 	 * @return the first name
 	 */
 	public String getFirstName() {
@@ -74,8 +74,9 @@ public class PersonCSV {
 
 	/**
 	 * Sets the first name.
-	 *
-	 * @param firstName the new first name
+	 * 
+	 * @param firstName
+	 *            the new first name
 	 */
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
@@ -83,7 +84,7 @@ public class PersonCSV {
 
 	/**
 	 * Gets the last name.
-	 *
+	 * 
 	 * @return the last name
 	 */
 	public String getLastName() {
@@ -92,8 +93,9 @@ public class PersonCSV {
 
 	/**
 	 * Sets the last name.
-	 *
-	 * @param lastName the new last name
+	 * 
+	 * @param lastName
+	 *            the new last name
 	 */
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
@@ -101,7 +103,7 @@ public class PersonCSV {
 
 	/**
 	 * Gets the age.
-	 *
+	 * 
 	 * @return the age
 	 */
 	public int getAge() {
@@ -110,8 +112,9 @@ public class PersonCSV {
 
 	/**
 	 * Sets the age.
-	 *
-	 * @param age the new age
+	 * 
+	 * @param age
+	 *            the new age
 	 */
 	public void setAge(int age) {
 		this.age = age;
@@ -119,7 +122,7 @@ public class PersonCSV {
 
 	/**
 	 * Gets the birthdate.
-	 *
+	 * 
 	 * @return the birthdate
 	 */
 	public Date getBirthdate() {
@@ -128,8 +131,9 @@ public class PersonCSV {
 
 	/**
 	 * Sets the birthdate.
-	 *
-	 * @param birthdate the new birthdate
+	 * 
+	 * @param birthdate
+	 *            the new birthdate
 	 */
 	public void setBirthdate(Date birthdate) {
 		this.birthdate = birthdate;
@@ -137,7 +141,7 @@ public class PersonCSV {
 
 	/**
 	 * Gets the address.
-	 *
+	 * 
 	 * @return the address
 	 */
 	public String getAddress() {
@@ -146,13 +150,12 @@ public class PersonCSV {
 
 	/**
 	 * Sets the address.
-	 *
-	 * @param address the new address
+	 * 
+	 * @param address
+	 *            the new address
 	 */
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	
-	
 
 }

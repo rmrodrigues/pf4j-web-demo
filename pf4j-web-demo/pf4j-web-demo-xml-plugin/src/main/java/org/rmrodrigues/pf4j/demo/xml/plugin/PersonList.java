@@ -8,17 +8,20 @@ import java.util.List;
 import org.rmrodrigues.pf4j.demo.api.model.Person;
 
 /**
- * @author rmrodrigues
+ * The Class PersonList.
  * 
+ * @author rmrodrigues
  */
 public class PersonList {
 
+	/** The list. */
 	private List<Person> list;
 
 	/**
 	 * Instantiates a new person list.
-	 *
-	 * @param listIN the list in
+	 * 
+	 * @param listIN
+	 *            the list in
 	 */
 	public PersonList(List<Person> listIN) {
 		this.list = listIN;

@@ -52,7 +52,7 @@
 
 	<context-param>
 		<param-name>pf4j.pluginsDir</param-name>
-		<param-value>/var/lib/openshift/538f9982e0b8cdc747000073/app-root/data</param-value>
+		<param-value>!!!set home here!!!</param-value>
 	</context-param>
 
 	<filter>

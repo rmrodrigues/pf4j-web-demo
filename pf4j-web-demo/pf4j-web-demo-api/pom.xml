@@ -7,6 +7,11 @@
   </parent>
   <artifactId>pf4j-web-demo-api</artifactId>
   
+  <organization>
+		<name>RMRodrigues</name>
+		<url>https://github.com/rmrodrigues/pf4j-web-demo</url>
+	</organization>
+  
 	<dependencies>
 		<dependency>
 			<groupId>ro.fortsoft.pf4j</groupId>

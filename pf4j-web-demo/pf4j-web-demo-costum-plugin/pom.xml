@@ -8,6 +8,12 @@
 	</parent>
 	<artifactId>pf4j-web-demo-costum-plugin</artifactId>
 	
+	
+	<organization>
+		<name>RMRodrigues</name>
+		<url>https://github.com/rmrodrigues/pf4j-web-demo</url>
+	</organization>
+	
 	<properties>
         <plugin.id>pf4j-web-demo-costum-plugin</plugin.id>
         <plugin.class>org.rmrodrigues.pf4j.demo.costum.plugin.CostumExpoterPlugin</plugin.class>

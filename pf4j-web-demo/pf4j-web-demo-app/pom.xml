@@ -10,6 +10,11 @@
 	</parent>
 	<artifactId>pf4j-web-demo-app</artifactId>
 	<packaging>war</packaging>
+	
+	<organization>
+		<name>RMRodrigues</name>
+		<url>https://github.com/rmrodrigues/pf4j-web-demo</url>
+	</organization>
 
 	<dependencies>
 		<dependency>

@@ -9,6 +9,11 @@
 	<groupId>org.rmrodrigues.pf4j.web.demo.xml</groupId>
 	<artifactId>pf4j-web-demo-xml-plugin</artifactId>
 	
+	<organization>
+		<name>RMRodrigues</name>
+		<url>https://github.com/rmrodrigues/pf4j-web-demo</url>
+	</organization>
+	
 	<properties>
         <plugin.id>pf4j-web-demo-xml-plugin</plugin.id>
         <plugin.description>pf4j-web-demo-xml-plugin</plugin.description>

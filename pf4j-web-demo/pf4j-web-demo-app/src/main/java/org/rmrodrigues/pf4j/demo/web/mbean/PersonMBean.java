@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.rmrodrigues.pf4j.demo.api.ExporterBase;
 import org.rmrodrigues.pf4j.demo.api.model.Person;
-import org.rmrodrigues.pf4j.demo.web.integration.PF4JWrapper;
+import org.rmrodrigues.pf4j.web.PluginManagerHolder;
 
 /**
  * The Class PersonMBean.
@@ -127,7 +127,8 @@ public class PersonMBean implements Serializable {
 	 * @return the plugins
 	 */
 	public List<ExporterBase> getPlugins() {
-		return PF4JWrapper.getInstance().getExtensions(ExporterBase.class);
+		return PluginManagerHolder.getPluginManager().getExtensions(
+				ExporterBase.class);
 	}
 
 }

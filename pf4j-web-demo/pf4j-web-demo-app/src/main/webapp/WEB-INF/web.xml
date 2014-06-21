@@ -46,13 +46,13 @@
 		<url-pattern>*.xhtml</url-pattern>
 	</servlet-mapping>
 
-	<listener>
-		<listener-class>org.rmrodrigues.pf4j.demo.web.listener.PersonAppListener</listener-class>
-	</listener>
+<!-- 	<listener> -->
+<!-- 		<listener-class>org.rmrodrigues.pf4j.web.PluginManagerInitializer</listener-class> -->
+<!-- 	</listener> -->
 
 	<context-param>
 		<param-name>pf4j.pluginsDir</param-name>
-		<param-value>!!!set home here!!!</param-value>
+		<param-value>/Users/rmrodrigues/git/pf4j-web-demo/plugins</param-value>
 	</context-param>
 
 	<filter>

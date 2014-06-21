@@ -10,7 +10,7 @@
 	</parent>
 	<artifactId>pf4j-web-demo-app</artifactId>
 	<packaging>war</packaging>
-	
+
 	<organization>
 		<name>RMRodrigues</name>
 		<url>https://github.com/rmrodrigues/pf4j-web-demo</url>
@@ -28,6 +28,11 @@
 			<groupId>ro.fortsoft.pf4j</groupId>
 			<artifactId>pf4j</artifactId>
 			<version>${pf4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.rmrodrigues.pf4j.web</groupId>
+			<artifactId>pf4j-web</artifactId>
+			<version>${pf4j.web.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.rmrodrigues.pf4j.web.demo</groupId>

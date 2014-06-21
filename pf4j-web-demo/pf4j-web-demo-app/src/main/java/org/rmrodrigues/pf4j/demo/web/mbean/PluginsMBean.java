@@ -17,7 +17,7 @@ import org.apache.commons.io.FilenameUtils;
 import org.apache.myfaces.custom.fileupload.UploadedFile;
 import org.rmrodrigues.pf4j.demo.api.ExporterBase;
 import org.rmrodrigues.pf4j.demo.api.model.Person;
-import org.rmrodrigues.pf4j.demo.web.integration.PF4JWrapper;
+import org.rmrodrigues.pf4j.web.PluginManagerHolder;
 
 import ro.fortsoft.pf4j.PluginState;
 import ro.fortsoft.pf4j.PluginWrapper;
@@ -40,7 +40,7 @@ public class PluginsMBean implements Serializable {
 	 * @return the plugins
 	 */
 	public List<PluginWrapper> getPlugins() {
-		return PF4JWrapper.getInstance().getPlugins();
+		return PluginManagerHolder.getPluginManager().getPlugins();
 	}
 
 	/**
@@ -63,7 +63,8 @@ public class PluginsMBean implements Serializable {
 	 * @return the string
 	 */
 	public String disable(PluginWrapper pluginWrapper) {
-		PF4JWrapper.getInstance().stopPlugin(pluginWrapper.getPluginId());
+		PluginManagerHolder.getPluginManager().stopPlugin(
+				pluginWrapper.getPluginId());
 		return "";
 	}
 
@@ -75,7 +76,8 @@ public class PluginsMBean implements Serializable {
 	 * @return the string
 	 */
 	public String delete(PluginWrapper pluginWrapper) {
-		PF4JWrapper.getInstance().deletePlugin(pluginWrapper.getPluginId());
+		PluginManagerHolder.getPluginManager().deletePlugin(
+				pluginWrapper.getPluginId());
 		return "";
 	}
 
@@ -87,8 +89,10 @@ public class PluginsMBean implements Serializable {
 	 * @return the string
 	 */
 	public String enable(PluginWrapper pluginWrapper) {
-		PF4JWrapper.getInstance().enablePlugin(pluginWrapper.getPluginId());
-		PF4JWrapper.getInstance().startPlugin(pluginWrapper.getPluginId());
+		PluginManagerHolder.getPluginManager().enablePlugin(
+				pluginWrapper.getPluginId());
+		PluginManagerHolder.getPluginManager().startPlugin(
+				pluginWrapper.getPluginId());
 		return "";
 	}
 
@@ -146,12 +150,12 @@ public class PluginsMBean implements Serializable {
 				+ fileName);
 		out.write(bytes);
 		out.close();
-		String newPluginID = PF4JWrapper.getInstance().loadPlugin(
+		String newPluginID = PluginManagerHolder.getPluginManager().loadPlugin(
 				new File(pluginsHome + "/" + fileName));
 
-		PF4JWrapper.getInstance().enablePlugin(newPluginID);
+		PluginManagerHolder.getPluginManager().enablePlugin(newPluginID);
 
-		PF4JWrapper.getInstance().startPlugin(newPluginID);
+		PluginManagerHolder.getPluginManager().startPlugin(newPluginID);
 
 		FacesContext.getCurrentInstance().addMessage(
 				null,
